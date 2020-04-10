@@ -97,7 +97,7 @@
    <div class="my-jombotron">
       <div class="row">
          <div class="col-md-12 text-center welcome">
-            <h1 class="text-light">Document your thought processes here on Emedia Blog</h1> 
+            <h1 class="text-light">Document your creative processes here on Emedia Blog</h1> 
             <a href="/register" class="btn btn-primary" id="my-btn1">Get Started</a>
             <a href="/posts" class="btn btn-primary" id="my-btn2">Explore</a>
          </div>
