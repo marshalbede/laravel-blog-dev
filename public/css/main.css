@@ -1,0 +1,77 @@
+.customize-nav{
+    background-image: url('/img/image.jpg');
+}
+
+.my-jombotron{
+    background-image: url('/img/image.jpg');
+    height: 29em;
+    
+}
+
+.auth-class{
+    background-image: url('/img/image.jpg');
+}
+.welcome{
+    padding-top: 8em;
+}
+
+#my-btn1{
+    border-radius: 22px;
+  background: #73AD21;
+  padding: 15px;
+}
+
+#my-btn2{
+    border-radius: 22px;
+  background: #73AD21;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30PX;
+}
+
+#my-btn1:hover{
+    background-color: mediumaquamarine;
+    padding: 19px;
+}
+
+#my-btn2:hover{
+    background-color: mediumaquamarine;
+    padding: 19px;
+    padding-left: 30px;
+    padding-right: 30PX;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 54px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+    .navbar-collapse.collapsing {
+        height: auto;
+        -webkit-transition: left 0.3s ease;
+        -o-transition: left 0.3s ease;
+        -moz-transition: left 0.3s ease;
+        transition: left 0.3s ease;
+        left: -100%;
+    }
+    .navbar-collapse.show {
+        background-image: url('/img/image.jpg');
+        left: 0;
+        -webkit-transition: left 0.3s ease-in;
+        -o-transition: left 0.3s ease-in;
+        -moz-transition: left 0.3s ease-in;
+        transition: left 0.3s ease-in;
+    }
+}
+
+.customize-nav a:hover{
+    background-color: rgb(70, 71, 71);
+    border-radius: 10px;
+    padding: 10px;
+}
+
