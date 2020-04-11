@@ -11,15 +11,15 @@
             </div>
 
 
-            
+
             <div class="form-group">
                 {{ Form::label('body', 'Body') }}
                 {{ Form::textarea('body', '', [ 'id' => 'editor',
-                    'placeholder' => 'Type your post', 
-                'class' =>  'form-control description', 
+                    'placeholder' => 'Type your post',
+                'class' =>  'form-control description',
                 'name'  => 'body',
                 ]) }}
-                
+
             </div>
 
             <div class="form-group">
@@ -32,18 +32,17 @@
 
         {!! Form::close() !!}
         </div>
-        
+
     </div>
-    
+
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-<script>
-    tinymce.init({
-        selector:'textarea.description',
-        width: 900,
-        height: 300,
-        forced_root_block: false, // Start tinyMCE without any paragraph tag
-    });
-</script>
+    <script>
+        tinymce.init({
+            selector:'textarea.description',
+            forced_root_block: false, // Start tinyMCE without any paragraph tag
+            plugins: "autoresize"
+        });
+    </script>
 @endsection
 
 

@@ -5,7 +5,7 @@
 .my-jombotron{
     background-image: url('/img/image.jpg');
     height: 29em;
-    
+
 }
 
 .auth-class{
@@ -75,3 +75,10 @@
     padding: 10px;
 }
 
+.tox-toolbar {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+}
+.tox-toolbar__group {
+    flex-wrap: nowrap !important;
+}

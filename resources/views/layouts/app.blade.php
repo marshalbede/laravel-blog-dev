@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -20,20 +21,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{-- Custom css --}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-   
 
-    
+
+
 </head>
 <body>
     <div id="app">
         {{-- Navbar includes --}}
         @include('inc.nav')
-        
+
         <main class="container-fluid">
             <div class="container">
                 <div class="col-md-7 mt-4">
                     @include('inc.messages')
-                </div>  
+                </div>
             </div>
             @yield('content')
         </main>
