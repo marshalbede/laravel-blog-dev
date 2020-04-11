@@ -14,12 +14,12 @@
                         </div>
                     @endif
 
-                        <table class="table">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Post</th>
-                                    <th>Action</th>
-                                    <th>Action</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,10 +27,10 @@
                                     <tr>
                                         <td><a href="/posts/{{$post->id}}">{{$post->title}}</a></td>
                                         <td>
-                                            <a href="/posts/{{$post->id}}/edit" class="btn btn-success">Edit Post</a> 
+                                            <a href="/posts/{{$post->id}}/edit" class="btn btn-success">Edit Post</a>
                                         </td>
                                         <td>
-                                                {!! Form::open(['action'=> ['PostsController@destroy', $post->id], 
+                                                {!! Form::open(['action'=> ['PostsController@destroy', $post->id],
                                                 'method'=> 'post','onsubmit' => 'return confirm("Are you sure you want to delete?")'])!!}
                                                     {{Form::submit('Delete', ['class'=> 'btn btn-danger'])}}
                                                     {{Form::hidden('_method', 'DELETE')}}
