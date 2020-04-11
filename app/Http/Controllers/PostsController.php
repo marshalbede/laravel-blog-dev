@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Post;
 
 class PostsController extends Controller
 {
-
 
     /**
      * Create a new controller instance.
@@ -42,12 +42,13 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
-       
+
         // validate the form
         $this->validate($request, [
             'title' => 'required',
@@ -132,7 +133,7 @@ class PostsController extends Controller
             $fileNameToStore = $fileName."_".time().".".$fileExtension;
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
 
-        } 
+        }
 
         // store the form values in a database
         $post = Post::find($id);
@@ -141,7 +142,7 @@ class PostsController extends Controller
         if($request->hasFile('cover_image')){
             $post->cover_image = $fileNameToStore;
         }
-        
+
         $post->save();
         return redirect('/posts')->with('success', 'Post updated successfully');
     }
@@ -161,7 +162,7 @@ class PostsController extends Controller
             return redirect('/posts')->with('error', 'Unauthorized page');
         }
 
-        
+
         if($post->cover_image !== 'noimage.jpg'){
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
